@@ -1,6 +1,6 @@
 plugins {
-    id(AndroidX.application)
-    kotlin(AndroidX.android)
+    id(NameSpaces.application)
+    kotlin("android")
 }
 
 android {
@@ -39,4 +39,20 @@ dependencies {
     implementation(Compose.foundation)
     implementation(Compose.material)
     implementation(Compose.activity)
+    implementation(Compose.layout)
+    implementation(Compose.materialIconsExtended)
+    implementation(Compose.runtime)
+    implementation(Compose.themeAdapter)
+    implementation(AndroidX.core)
+    implementation(AndroidX.lifecycle)
+
+    //Test
+    implementation(Test.junit)
+    implementation(Test.instrumentedTestCompose)
+    implementation(TestUi.extJunit)
+    implementation(TestUi.espressoCore)
+    implementation(TestUi.uiUnitTest)
+
+    //Debugging
+    implementation(Debug.testManifest)
 }
