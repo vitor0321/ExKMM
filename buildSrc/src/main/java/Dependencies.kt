@@ -30,6 +30,7 @@ object Versions {
     const val kotlinSerializationCore = "1.3.2"
     const val serialization = "1.5.30"
     const val composeTest = "1.3.1"
+    const val shimmer = "1.0.3"
 }
 
 object NameSpaces {
@@ -77,7 +78,7 @@ object Compose {
     const val preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
     const val material = "androidx.compose.material:material:${Versions.compose}"
     const val activity = "androidx.activity:activity-compose:${Versions.activity}"
-
+    const val shimmer = "com.valentinilk.shimmer:compose-shimmer:${Versions.shimmer}"
     const val layout = "androidx.compose.foundation:foundation-layout:${Versions.compose}"
     const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${Versions.compose}"
     const val runtime = "androidx.compose.runtime:runtime:${Versions.compose} "

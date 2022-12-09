@@ -33,6 +33,8 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(AndroidX.core)
+    implementation(AndroidX.lifecycle)
     implementation(Compose.ui)
     implementation(Compose.tooling)
     implementation(Compose.preview)
@@ -43,8 +45,7 @@ dependencies {
     implementation(Compose.materialIconsExtended)
     implementation(Compose.runtime)
     implementation(Compose.themeAdapter)
-    implementation(AndroidX.core)
-    implementation(AndroidX.lifecycle)
+    implementation(Compose.shimmer)
 
     //Test
     implementation(Test.junit)
