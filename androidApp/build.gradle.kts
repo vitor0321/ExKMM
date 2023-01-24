@@ -49,10 +49,10 @@ dependencies {
 
     //Test
     implementation(Test.junit)
-    implementation(Test.instrumentedTestCompose)
-    implementation(TestUi.extJunit)
-    implementation(TestUi.espressoCore)
-    implementation(TestUi.uiUnitTest)
+    implementation(Test.instrumentTestCompose)
+    implementation(Test.instrumentCommonJunit)
+    implementation(Test.instrumentCommonEspresso)
+    implementation(Test.uiUnitTest)
 
     //Debugging
     implementation(Debug.testManifest)

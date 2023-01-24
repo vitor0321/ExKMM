@@ -7,7 +7,7 @@ plugins {
 
 kotlin {
     android()
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -35,6 +35,7 @@ kotlin {
                 implementation(Test.kotlinCommon)
                 implementation(Test.kotlinAnnotation)
                 implementation(Mockk.common)
+                implementation(Mockk.core)
             }
         }
         val androidMain by getting {
@@ -43,7 +44,18 @@ kotlin {
                 implementation(SqlDelight.driverAndroid)
             }
         }
-        val androidTest by getting
+        val androidTest by getting {
+            dependencies {
+                implementation(Test.junit)
+            }
+        }
+        val androidAndroidTest by getting {
+            dependencies {
+                implementation(Test.instrumentCommonJunit)
+                implementation(Test.instrumentCommonJunitKtx)
+                implementation(Test.instrumentCommonEspresso)
+            }
+        }
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -52,7 +64,7 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
-            dependencies{
+            dependencies {
                 implementation(SqlDelight.driverIos)
             }
         }
@@ -74,11 +86,17 @@ android {
     defaultConfig {
         minSdk = Playstore.minSdk
         targetSdk = Playstore.targetSdk
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    packagingOptions {
+        resources {
+            excludes += mutableSetOf("META-INF/LICENSE.md", "META-INF/LICENSE-notice.md")
+        }
     }
 }
 
 sqldelight {
-    database(SqlDelight.databaseScheme){
+    database(SqlDelight.databaseScheme) {
         packageName = SqlDelight.databasePackage
     }
 }

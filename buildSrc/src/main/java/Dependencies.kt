@@ -20,7 +20,7 @@ object Versions {
     const val junit = "4.13.2"
     const val extJunit = "1.1.3"
     const val testManifest = "1.1.0-beta01"
-    const val expressoCore = "3.4.0"
+    const val espressoCore = "3.4.0"
     const val uiUnitTest = "1.1.0-beta01"
     const val kotlinx = "1.6.4"
     const val mockkCommon = "1.12.5"
@@ -90,12 +90,11 @@ object Test {
     const val kotlinAnnotation = "org.jetbrains.kotlin:kotlin-test-annotations-common:${Versions.kotlin}"
     const val kotlinCommon = "org.jetbrains.kotlin:kotlin-test-common:${Versions.kotlin}"
     const val coroutinesTest  = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinx}"
-    const val instrumentedTestCompose  = "androidx.compose.ui:ui-test-junit4:${Versions.composeTest}"
-}
 
-object TestUi {
-    const val extJunit = "androidx.test.ext:junit:${Versions.extJunit}"
-    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.expressoCore}"
+    const val instrumentTestCompose  = "androidx.compose.ui:ui-test-junit4:${Versions.composeTest}"
+    const val instrumentCommonJunit = "androidx.test.ext:junit:${Versions.extJunit}"
+    const val instrumentCommonJunitKtx = "androidx.test.ext:junit-ktx:${Versions.extJunit}"
+    const val instrumentCommonEspresso = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     const val uiUnitTest = "androidx.compose.ui:ui-test-junit4:${Versions.uiUnitTest}"
 }
 
