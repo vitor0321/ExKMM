@@ -93,6 +93,18 @@ android {
             excludes += mutableSetOf("META-INF/LICENSE.md", "META-INF/LICENSE-notice.md")
         }
     }
+    flavorDimensions += "tier"
+    productFlavors {
+        create("development") {
+            dimension = "tier"
+        }
+        create("production") {
+            dimension = "tier"
+        }
+        create("integration") {
+            dimension = "tier"
+        }
+    }
 }
 
 sqldelight {
